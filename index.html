@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BismanFx Academy - Formation Trading Institutionnel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: { 
+                    colors: { 
+                        primary: '#EF4444', 
+                        premium: '#3A0004', 
+                        page: '#F7F7F7', 
+                        card: '#FFFFFF', 
+                        textmain: '#1F2937' 
+                    } 
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/componentLoader.js" defer></script>
+    <script src="assets/js/chat.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body class="bg-page text-textmain antialiased">
+    <div id="header"></div>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <!-- <section class="bg-premium py-20 lg:py-32">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <span class="inline-block py-1 px-3 rounded bg-white/10 text-primary text-xs font-semibold tracking-wide uppercase mb-6 border border-primary/20">Plateforme d'excellence</span>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
+                        Maîtrisez les marchés avec la précision d'un institutionnel.
+                    </h1>
+                    <p class="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed">
+                        Formation rigoureuse, analyses de marché et mentoring en direct pour traders ambitieux. Construisez une rentabilité durable et prouvée.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="plans.html" class="bg-primary text-white text-center font-medium px-6 py-3 rounded hover:bg-red-600 transition shadow-sm">
+                            Découvrir nos programmes
+                        </a>
+                        <a href="about.html" class="bg-transparent border border-white/20 text-white text-center font-medium px-6 py-3 rounded hover:bg-white/5 transition">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+                <div class="fade-in relative hidden lg:block">
+                    <img src="assets/images/hero-trading.jpg" alt="Interface de trading professionnelle" class="w-full h-[450px] object-cover rounded-lg shadow-xl border border-white/10">
+                </div>
+            </div>
+        </section> -->
+
+        <section class="relative py-20 lg:py-32 overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <img src="assets/images/hero-trading.jpg" alt="Interface de trading professionnelle" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#3A0004]/90 via-[#3A0004]/70 to-transparent"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+            <span class="inline-block py-1 px-3 rounded bg-white/10 text-primary text-xs font-semibold tracking-wide uppercase mb-6 border border-primary/20">Académie d'excellence</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
+                Maîtrisez les marchés avec la précision d'un institutionnel.
+            </h1>
+            <p class="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed">
+                Formation rigoureuse, analyses de marché et mentoring en direct pour traders ambitieux. Construisez une rentabilité durable et prouvée.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="plans.html" class="bg-primary text-white text-center font-medium px-6 py-3 rounded hover:bg-red-600 transition shadow-sm">
+                    Découvrir nos programmes
+                </a>
+                <a href="about.html" class="bg-transparent border border-white/20 text-white text-center font-medium px-6 py-3 rounded hover:bg-white/5 transition">
+                    En savoir plus
+                </a>
+            </div>
+        </div>
+        <div class="fade-in relative hidden lg:block">
+            <!-- This div is intentionally left empty to maintain the grid layout -->
+        </div>
+    </div>
+</section>
+
+        <!-- 2. Trust Metrics -->
+        <section class="py-12 bg-card border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="border-l-2 border-primary pl-4">
+                        <h3 class="text-3xl font-bold text-textmain mb-1">+8.4%</h3>
+                        <p class="text-sm text-gray-500 font-medium">Objectif mensuel visé</p>
+                    </div>
+                    <div class="border-l-2 border-gray-200 pl-4">
+                        <h3 class="text-3xl font-bold text-textmain mb-1">1.5k+</h3>
+                        <p class="text-sm text-gray-500 font-medium">Traders accompagnés</p>
+                    </div>
+                    <div class="border-l-2 border-gray-200 pl-4">
+                        <h3 class="text-3xl font-bold text-textmain mb-1">$5M+</h3>
+                        <p class="text-sm text-gray-500 font-medium">Capital Prop Firms obtenu</p>
+                    </div>
+                    <div class="border-l-2 border-gray-200 pl-4">
+                        <h3 class="text-3xl font-bold text-textmain mb-1">98%</h3>
+                        <p class="text-sm text-gray-500 font-medium">Taux de satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Performance Results -->
+        <section class="py-24 bg-page">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-textmain tracking-tight mb-6">Des résultats basés sur la gestion du risque.</h2>
+                    <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+                        <p>Nous ne promettons pas de doubler votre compte en un mois. Notre approche est axée sur la <strong class="text-textmain font-semibold">préservation du capital</strong> et la croissance asymétrique.</p>
+                        <p>Nos stratégies institutionnelles (Smart Money Concepts) permettent d'obtenir des ratios Risque/Récompense (RR) élevés, réduisant ainsi la pression psychologique. Un taux de réussite de 40% suffit pour être hautement rentable.</p>
+                    </div>
+                    <ul class="space-y-4 text-sm text-textmain font-medium">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            Drawdown maximum contrôlé (sous les 5%)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            Track-records vérifiés (MyFxBook)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            Préparation certifiée pour les Prop Firms
+                        </li>
+                    </ul>
+                </div>
+                <!-- Placeholder Graphique B2B -->
+                <div class="relative rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="assets/images/sl_022321_41020_20.jpg" alt="Trading dashboard analysis" class="w-full h-[420px] object-cover">
+                    <!-- Optional overlay for modern look -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. How it works -->
+        <section class="py-24 bg-card border-y border-gray-200">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-textmain mb-4 tracking-tight">Notre méthodologie</h2>
+                    <p class="text-gray-600">Un processus d'apprentissage structuré pour éliminer le hasard et construire un plan de trading mécanique.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-page p-8 rounded-lg border border-gray-200">
+                        <div class="text-primary font-bold text-xl mb-4">01.</div>
+                        <h3 class="text-lg font-bold text-textmain mb-2">Structure & Liquidité</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Apprentissage de la vraie structure de marché (SMC). Comprenez comment les algorithmes institutionnels délivrent le prix.</p>
+                    </div>
+                    <div class="bg-page p-8 rounded-lg border border-gray-200">
+                        <div class="text-primary font-bold text-xl mb-4">02.</div>
+                        <h3 class="text-lg font-bold text-textmain mb-2">Gestion du risque</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Mise en place d'un framework strict. La préservation du capital est la priorité absolue avant la recherche de profit.</p>
+                    </div>
+                    <div class="bg-page p-8 rounded-lg border border-gray-200">
+                        <div class="text-primary font-bold text-xl mb-4">03.</div>
+                        <h3 class="text-lg font-bold text-textmain mb-2">Exécution (Live)</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">Application des concepts lors de nos sessions en direct. Validation des compétences et préparation aux tests Prop Firms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. About the trader -->
+        <section class="py-24 bg-page">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5">
+                    <img src="assets/images/trader.jpg" alt="Fondateur BismanFx" class="w-full h-[500px] object-cover rounded-lg shadow-sm border border-gray-200 grayscale hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="md:col-span-7 md:pl-8">
+                    <h2 class="text-3xl font-bold text-textmain tracking-tight mb-6">L'expertise d'un trader de terrain.</h2>
+                    <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+                        <p>Je m’appelle , <b>Matthieu Bisimwa</b>, trader congolais passionné par les marchés financiers et animé par la vision de la liberté financière. Depuis plusieurs années, je m’intéresse profondément au fonctionnement des marchés, en particulier au Forex, un univers qui offre de nombreuses opportunités à ceux qui prennent le temps d’apprendre, de comprendre et de se discipliner.</p>
+                        <p>Fort de cette passion et de mon expérience, j’ai fondé BismanFx Academy, une académie dédiée à la formation, à l’accompagnement et au mentorat des personnes qui souhaitent découvrir le trading et développer de véritables compétences dans ce domaine. À travers cette académie, mon objectif est de partager des connaissances pratiques, des stratégies efficaces et une approche responsable du trading afin d’aider chacun à progresser pas à pas.</p>
+                        <p>BismanFx Academy se veut plus qu’une simple académie d’apprentissage : c’est une communauté d’apprentissage et de croissance, où les étudiants peuvent se former, échanger, poser des questions et être guidés dans leur parcours. Mon ambition est d’aider les jeunes et les passionnés, en particulier en Afrique, à comprendre les marchés financiers et à construire progressivement une indépendance financière durable grâce au trading.</p>
+                    </div>
+                    <a href="about.html" class="text-primary font-medium hover:text-red-700 flex items-center gap-2 transition">
+                        Découvrir notre histoire <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Trading Plans Preview -->
+        <section class="py-24 bg-card border-y border-gray-200">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div class="max-w-xl">
+                        <h2 class="text-3xl font-bold text-textmain tracking-tight mb-4">Programmes de formation</h2>
+                        <p class="text-gray-600">Des parcours adaptés à votre niveau d'engagement. Pas d'abonnement mensuel abusif, une tarification transparente.</p>
+                    </div>
+                    <a href="plans.html" class="bg-page border border-gray-200 text-textmain font-medium px-6 py-2.5 rounded hover:bg-gray-100 transition whitespace-nowrap">
+                        Voir tous les plans
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Plan 1 -->
+                    <div class="p-8 border border-gray-200 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-textmain mb-2">Intermédiaire</h3>
+                            <p class="text-sm text-gray-500">Fondations SMC et accès plateforme.</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-2xl font-bold text-textmain mb-2">150$</p>
+                            <a href="plans.html" class="text-sm font-medium text-primary hover:text-red-700 transition">Détails du programme →</a>
+                        </div>
+                    </div>
+                    <!-- Plan 2 -->
+                    <div class="p-8 border-2 border-primary rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative">
+                        <div class="absolute -top-3 left-6 bg-primary text-white text-xs font-bold px-3 py-1 rounded">VIP</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-textmain mb-2">Débutant</h3>
+                            <p class="text-sm text-gray-500">Formation, signaux en direct et coaching.</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-2xl font-bold text-textmain mb-2">200$</p>
+                            <a href="plans.html" class="text-sm font-medium text-primary hover:text-red-700 transition">Détails du programme →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Testimonials -->
+        <section class="py-24 bg-premium text-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-bold tracking-tight mb-16 text-center">Ils ont franchi le cap.</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-lg">
+                        <div class="flex items-center gap-1 text-primary mb-4">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <!-- Répété 5 fois -->
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-6">« J'ai perdu des mois avec des formations basiques. Le programme VIP de BismanFx m'a appris à gérer mon risque. J'ai validé mon test FTMO de 50k$ après 2 mois de mentorship. »</p>
+                        <p class="font-bold text-white text-sm">Julien M.</p>
+                        <p class="text-xs text-gray-400">Trader Indépendant</p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-lg">
+                        <div class="flex items-center gap-1 text-primary mb-4">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-6">« Les sessions d'analyse en direct sont d'une précision chirurgicale. Comprendre l'algorithmie bancaire et la liquidité a totalement changé ma vision des graphiques. »</p>
+                        <p class="font-bold text-white text-sm">Sophie T.</p>
+                        <p class="text-xs text-gray-400">Analyste Financier</p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-lg">
+                        <div class="flex items-center gap-1 text-primary mb-4">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-6">« Le support 1-to-1 est exceptionnel. On sent l'expérience professionnelle derrière chaque conseil. Fini le stress, mon trading est devenu méthodique. »</p>
+                        <p class="font-bold text-white text-sm">Karim B.</p>
+                        <p class="text-xs text-gray-400">Élève VIP</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FAQ Preview -->
+        <section class="py-24 bg-page">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-textmain tracking-tight mb-4">Questions Fréquentes</h2>
+                        <p class="text-gray-600">L'essentiel à savoir avant d'investir dans votre éducation financière.</p>
+                    </div>
+                    <a href="faq.html" class="text-primary font-medium hover:text-red-700 flex items-center gap-2 transition whitespace-nowrap">
+                        Voir toute la FAQ <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-card p-6 border border-gray-200 rounded-lg">
+                        <h3 class="font-bold text-textmain mb-2">Quel est le capital requis pour commencer ?</h3>
+                        <p class="text-sm text-gray-600">L'apprentissage se fait en démo. Ensuite, via les Prop Firms, un ticket d'entrée de 100€ suffit pour passer un test et gérer un capital de 10 000€.</p>
+                    </div>
+                    <div class="bg-card p-6 border border-gray-200 rounded-lg">
+                        <h3 class="font-bold text-textmain mb-2">La stratégie fonctionne-t-elle sur les cryptos ?</h3>
+                        <p class="text-sm text-gray-600">Oui. Les concepts institutionnels (SMC) s'appliquent à tous les marchés ayant suffisamment de liquidité : Forex, Indices, et Crypto.</p>
+                    </div>
+                    <div class="bg-card p-6 border border-gray-200 rounded-lg">
+                        <h3 class="font-bold text-textmain mb-2">Combien de temps avant d'être rentable ?</h3>
+                        <p class="text-sm text-gray-600">Cela dépend de votre discipline. En moyenne, nos étudiants rigoureux commencent à voir une constance après 3 à 6 mois de pratique appliquée.</p>
+                    </div>
+                    <div class="bg-card p-6 border border-gray-200 rounded-lg">
+                        <h3 class="font-bold text-textmain mb-2">Puis-je me faire rembourser ?</h3>
+                        <p class="text-sm text-gray-600">Oui, nous offrons une garantie de remboursement sous 14 jours si vous n'avez pas consommé plus de 20% du contenu vidéo de l'académie.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Call to action -->
+        <section class="py-24 bg-card border-t border-gray-200">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-textmain mb-6">Prêt à professionnaliser votre approche ?</h2>
+                <p class="text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed">Arrêtez de deviner la direction du marché. Rejoignez une communauté de traders sérieux et apprenez à lire les véritables intentions des algorithmes bancaires.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="plans.html" class="inline-block bg-textmain text-white font-medium px-8 py-3 rounded hover:bg-gray-800 transition shadow-sm">
+                        Rejoindre l'Académie
+                    </a>
+                    <a href="contact.html" class="inline-block bg-page border border-gray-300 text-textmain font-medium px-8 py-3 rounded hover:bg-gray-100 transition shadow-sm">
+                        Contacter un conseiller
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+</body>
+</html>

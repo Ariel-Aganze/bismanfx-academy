@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans & Tarifs - BismanFx</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#EF4444', premium: '#3A0004', page: '#F7F7F7', card: '#FFFFFF', textmain: '#1F2937' } } } }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/componentLoader.js" defer></script>
+    <script src="assets/js/chat.js" defer></script>
+</head>
+<body class="bg-page text-textmain antialiased">
+    <div id="header"></div>
+
+    <div class="bg-white border-b border-gray-200 py-16 text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h1 class="text-4xl font-bold text-textmain tracking-tight mb-4">Investissement Pédagogique</h1>
+            <p class="text-gray-600 text-lg">Des programmes structurés, sans frais cachés. Choisissez l'accompagnement adapté à votre niveau.</p>
+        </div>
+    </div>
+
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Plan Intermédiaire -->
+                <div class="bg-card rounded-lg border border-gray-200 p-8 shadow-sm flex flex-col">
+                    <h3 class="text-lg font-bold text-textmain">Intermédiaire</h3>
+                    <p class="text-sm text-gray-500 mt-2 h-10">Accès aux stratégies avancées pour traders autonomes.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-bold text-textmain">100$</span>
+                        <span class="text-sm text-gray-500 font-medium"></span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1 text-sm text-gray-600">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Stratégies SMC avancées
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Support PDF des cours
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Accès Discord (Salon Général)
+                        </li>
+                    </ul>
+                    <button onclick="openWhatsApp('intermediaire')" class="w-full border border-gray-300 text-textmain font-medium py-2.5 rounded hover:bg-gray-50 transition cursor-pointer">
+                        Choisir ce plan
+                    </button>
+                </div>
+
+                <!-- Plan Débutant (RECOMMANDÉ) -->
+                <div class="bg-card rounded-lg border-2 border-primary p-8 shadow-md flex flex-col relative transform md:-translate-y-2">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMANDÉ</div>
+                    <h3 class="text-lg font-bold text-textmain">Débutant</h3>
+                    <p class="text-sm text-gray-500 mt-2 h-10">Le programme complet pour bien démarrer.</p>
+                    <div class="my-6">
+                        <span class="text-4xl font-bold text-textmain">200$</span>
+                        <span class="text-sm text-gray-500 font-medium"></span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1 text-sm text-gray-600">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Tout le contenu Intermédiaire
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Canal Telegram VIP (Analyses en temps réel)
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            2 sessions Zoom par semaine
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Accompagnement défis Prop Firms
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Formation complète de A à Z
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Support prioritaire
+                        </li>
+                    </ul>
+                    <button onclick="openWhatsApp('debutant')" class="w-full bg-primary text-white font-medium py-2.5 rounded hover:bg-red-600 transition cursor-pointer">
+                        Commencer l'aventure
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        function openWhatsApp(plan) {
+            const phoneNumber = "+243993161923";
+            
+            let message = "";
+            if (plan === 'debutant') {
+                message = "Bonjour, je suis intéressé par le pack DÉBUTANT à 200$. Je souhaite démarrer mon apprentissage du trading avec BismanFx Academy.";
+            } else if (plan === 'intermediaire') {
+                message = "Bonjour, je suis intéressé par le pack INTERMÉDIAIRE à 100$. Je souhaite accéder aux stratégies avancées de BismanFx Academy.";
+            }
+            
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

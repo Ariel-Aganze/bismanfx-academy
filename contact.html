@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - BismanFx</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#EF4444', premium: '#3A0004', page: '#F7F7F7', card: '#FFFFFF', textmain: '#1F2937' } } } }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/componentLoader.js" defer></script>
+    <script src="assets/js/chat.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .contact-input {
+            transition: all 0.2s ease;
+        }
+        .contact-input:focus {
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-textmain antialiased">
+    <div id="header"></div>
+
+    <!-- Header minimaliste -->
+    <div class="bg-white border-b border-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-primary rounded-full"></span>
+                    <span class="text-sm font-medium text-gray-600">Contact</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-light text-textmain tracking-tight mb-4">
+                    Restons en<span class="font-semibold text-primary"> contact</span>
+                </h1>
+                <p class="text-gray-500 text-lg max-w-2xl leading-relaxed">
+                    Notre équipe est à votre disposition pour répondre à toutes vos questions concernant nos programmes de formation et services.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Contact -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Formulaire de contact avec Formspree -->
+                <div class="bg-card rounded-2xl border border-gray-100 shadow-sm p-10">
+                    <h2 class="text-2xl font-semibold text-textmain mb-8">Envoyez-nous un message</h2>
+                    <form action="https://formspree.io/f/mgonnyoo" method="POST" class="space-y-6">
+                        <!-- Champ caché pour le sujet (optionnel) -->
+                        <input type="hidden" name="_subject" value="Nouveau message depuis le site BismanFx">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Prénom</label>
+                                <input type="text" 
+                                       name="firstname"
+                                       placeholder="Jean" 
+                                       class="contact-input w-full border border-gray-200 rounded-lg p-3 text-sm focus:outline-none focus:border-primary bg-white transition" 
+                                       required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Nom</label>
+                                <input type="text" 
+                                       name="lastname"
+                                       placeholder="Dupont" 
+                                       class="contact-input w-full border border-gray-200 rounded-lg p-3 text-sm focus:outline-none focus:border-primary bg-white transition" 
+                                       required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email professionnel</label>
+                            <input type="email" 
+                                   name="email"
+                                   placeholder="jean@exemple.com" 
+                                   class="contact-input w-full border border-gray-200 rounded-lg p-3 text-sm focus:outline-none focus:border-primary bg-white transition" 
+                                   required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Téléphone (optionnel)</label>
+                            <input type="tel" 
+                                   name="phone"
+                                   placeholder="Veuillez commencer par l'indicatif international (ou Code pays) " 
+                                   class="contact-input w-full border border-gray-200 rounded-lg p-3 text-sm focus:outline-none focus:border-primary bg-white transition">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Sujet</label>
+                            <select name="subject" class="contact-input w-full border border-gray-200 rounded-lg p-3 text-sm focus:outline-none focus:border-primary bg-white transition">
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="programme">Question sur un programme</option>
+                                <option value="support">Support technique</option>
+                                <option value="partenariat">Partenariat</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea name="message" 
+                                      rows="5" 
+                                      placeholder="Bonjour, je souhaite en savoir plus sur vos programmes de formation..." 
+                                      class="contact-input w-full border border-gray-200 rounded-lg p-3 text-sm focus:outline-none focus:border-primary bg-white transition resize-none" 
+                                      required></textarea>
+                        </div>
+                        
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="rgpd" name="rgpd_consent" value="accepted" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary" required>
+                            <label for="rgpd" class="text-xs text-gray-500">
+                                J'accepte que mes données soient traitées dans le cadre de ma demande et de la relation commerciale qui pourrait en découler.
+                            </label>
+                        </div>
+                        
+                        <!-- Protection anti-spam (optionnel) -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary text-white font-medium py-3.5 rounded-lg hover:bg-red-600 transition shadow-sm hover:shadow-md">
+                            Envoyer le message
+                        </button>
+                    </form>
+                    
+                    <!-- Message de confirmation après envoi (géré par Formspree) -->
+                    <p class="text-xs text-gray-400 mt-4 text-center">
+                        <!-- Formulaire sécurisé via Formspree • Vos données sont confidentielles -->
+                    </p>
+                </div>
+
+                <!-- Informations de contact et image -->
+                <div class="space-y-8">
+                    <!-- Cartes de contact rapide -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div onclick="openWhatsappContact()" class="bg-card border border-gray-100 rounded-xl p-6 hover:border-primary/20 hover:shadow-md transition-all cursor-pointer group">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                                <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.031 0C5.383 0 0 5.383 0 12.032c0 2.13.55 4.19 1.595 6L.045 24l6.115-1.559a11.966 11.966 0 005.871 1.53h.005c6.649 0 12.031-5.383 12.031-12.033 0-6.648-5.382-12.031-12.036-12.031zM12.036 22h-.005a9.993 9.993 0 01-5.06-1.373l-.362-.215-3.765.986.997-3.67-.236-.375A9.972 9.972 0 012.054 12.03c0-5.503 4.478-9.981 9.982-9.981 5.504 0 9.983 4.478 9.983 9.982 0 5.503-4.479 9.981-9.983 9.981z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-textmain mb-1">WhatsApp</h3>
+                            <p class="text-sm text-gray-500 mb-3">Réponse sous 1h</p>
+                            <p class="text-primary text-sm font-medium group-hover:underline">+243 993 161 923</p>
+                        </div>
+
+                        <div class="bg-card border border-gray-100 rounded-xl p-6 hover:border-primary/20 hover:shadow-md transition-all group">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-textmain mb-1">Email</h3>
+                            <p class="text-sm text-gray-500 mb-3">Réponse sous 24h</p>
+                            <a href="mailto:contact@bismanfx.com" class="text-primary text-sm font-medium hover:underline">contact@bismanfx.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Image bureau -->
+                    <div class="relative rounded-xl overflow-hidden border border-gray-100 shadow-sm h-64">
+                        <img src="assets/images/office.jpg" alt="Bureaux BismanFx" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="bg-white/90 backdrop-blur-sm rounded-lg p-4">
+                                <div class="flex items-center gap-3 text-sm">
+                                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                    <span class="text-gray-700">Birere, Goma</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Horaires -->
+                    <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                        <h3 class="font-semibold text-textmain mb-4">Horaires d'ouverture</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Lundi - Vendredi</span>
+                                <span class="font-medium text-textmain">9h00 - 19h00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Samedi</span>
+                                <span class="font-medium text-textmain">10h00 - 16h00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-500">Dimanche</span>
+                                <span class="font-medium text-textmain">Fermé</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        function openWhatsappContact() {
+            const phoneNumber = "+243993161923";
+            const message = encodeURIComponent("Bonjour, je vous contact depuis la page Contact de BismanFx. J'aimerais obtenir des informations.");
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Optionnel: Afficher un message de confirmation personnalisé après redirection de Formspree
+        if (window.location.hash === '#success') {
+            alert('Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+        }
+    </script>
+</body>
+</html>

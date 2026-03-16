@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - BismanFx</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#EF4444', premium: '#3A0004', page: '#F7F7F7', card: '#FFFFFF', textmain: '#1F2937' } } } }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/componentLoader.js" defer></script>
+    <script src="assets/js/chat.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .faq-item {
+            border-bottom: 1px solid #E5E7EB;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-button {
+            transition: all 0.2s ease;
+        }
+        .faq-button:hover .faq-question {
+            color: #EF4444;
+        }
+        .faq-icon {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-button.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            animation: fadeIn 0.3s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-white text-textmain antialiased">
+    <div id="header"></div>
+
+    <!-- Header original conservé -->
+    <div class="bg-white border-b border-gray-200 py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold text-textmain tracking-tight mb-4">Questions Fréquentes</h1>
+            <p class="text-gray-600">Tout ce que vous devez savoir avant de nous rejoindre.</p>
+        </div>
+    </div>
+
+    <!-- Section FAQ minimaliste -->
+    <section class="py-20 max-w-2xl mx-auto px-6">
+        <div class="bg-white rounded-2xl">
+            <!-- Question 1 -->
+            <div class="faq-item py-6 first:pt-0 last:pb-0">
+                <button class="faq-button w-full flex justify-between items-center gap-4 text-left group">
+                    <span class="faq-question text-base font-medium text-textmain transition-colors duration-200">
+                        Comment fonctionne le trading Forex ?
+                    </span>
+                    <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden mt-3 pr-8">
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Le marché des changes (Forex) permet d'échanger des devises. Notre approche institutionnelle vous apprend à identifier les zones d'intervention des banques centrales et des grandes institutions financières, pour anticiper les mouvements de marché avec une précision chirurgicale.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="faq-item py-6">
+                <button class="faq-button w-full flex justify-between items-center gap-4 text-left group">
+                    <span class="faq-question text-base font-medium text-textmain transition-colors duration-200">
+                        Quel est l'investissement minimum ?
+                    </span>
+                    <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden mt-3 pr-8">
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        L'apprentissage débute sur un compte de démonstration gratuit. Pour le trading réel, nous recommandons l'utilisation de Prop Firms qui vous allouent un capital (jusqu'à 500 000$) après réussite d'un challenge. Le coût moyen d'un challenge est de 300$, sans risque pour votre capital personnel.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="faq-item py-6 last:pb-0">
+                <button class="faq-button w-full flex justify-between items-center gap-4 text-left group">
+                    <span class="faq-question text-base font-medium text-textmain transition-colors duration-200">
+                        Puis-je retirer mes fonds à tout moment ?
+                    </span>
+                    <svg class="faq-icon w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden mt-3 pr-8">
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        BismanFx est une société d'éducation financière. Nous n'avons jamais accès à vos fonds de trading. Vos capitaux sont hébergés chez le courtier régulé de votre choix, qui garantit des retraits sans restriction, 24h/24 et 7j/7, conformément à la réglementation financière en vigueur.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact CTA minimaliste avec WhatsApp -->
+        <div class="mt-16 text-center">
+            <div class="border-t border-gray-100 pt-12">
+                <p class="text-gray-500 text-sm mb-4">
+                    Vous ne trouvez pas la réponse à votre question ?
+                </p>
+                <button onclick="openWhatsAppContact()" class="inline-flex items-center gap-2 text-primary hover:text-red-600 transition font-medium text-sm group cursor-pointer">
+                    <span>Contacter notre équipe</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        // FAQ JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqButtons = document.querySelectorAll('.faq-button');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Toggle active class
+                    this.classList.toggle('active');
+                    
+                    // Get answer
+                    const answer = this.nextElementSibling;
+                    
+                    // Toggle visibility
+                    if (answer.classList.contains('hidden')) {
+                        answer.classList.remove('hidden');
+                    } else {
+                        answer.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // WhatsApp function for contact button
+        function openWhatsAppContact() {
+            const phoneNumber = "+243993161923";
+            const message = "Bonjour, j'ai consulté la FAQ mais je n'ai pas trouvé réponse à ma question. Pouvez-vous m'aider ?";
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // WhatsApp function for floating button (if needed elsewhere)
+        function openWhatsAppGeneral() {
+            const phoneNumber = "+243993161923";
+            const message = "Bonjour, je souhaite en savoir plus sur BismanFx Academy.";
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

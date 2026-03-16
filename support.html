@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - BismanFx</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#EF4444', premium: '#3A0004', page: '#F7F7F7', card: '#FFFFFF', textmain: '#1F2937' } } } }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/componentLoader.js" defer></script>
+    <script src="assets/js/chat.js" defer></script>
+</head>
+<body class="bg-page text-textmain antialiased">
+    <div id="header"></div>
+
+    <div class="bg-white border-b border-gray-200 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h1 class="text-4xl font-bold text-textmain tracking-tight">Centre de Support</h1>
+            <p class="mt-4 text-gray-600">Une assistance rapide et efficace pour nos étudiants.</p>
+        </div>
+    </div>
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Telegram Support -->
+            <div onclick="openTelegram()" class="bg-card border border-gray-200 p-8 rounded-lg shadow-sm hover:border-gray-300 transition block cursor-pointer">
+                <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.914.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                </svg>
+                <h3 class="font-bold text-lg mb-2">Telegram Support</h3>
+                <p class="text-sm text-gray-600 mb-4">Assistance instantanée pour les questions d'analyse technique et d'accès VIP.</p>
+                <span class="text-primary text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Rejoindre sur Telegram 
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </div>
+
+            <!-- WhatsApp Support -->
+            <div onclick="openWhatsAppSupport()" class="bg-card border border-gray-200 p-8 rounded-lg shadow-sm hover:border-gray-300 transition block cursor-pointer">
+                <svg class="w-8 h-8 text-primary mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.031 0C5.383 0 0 5.383 0 12.032c0 2.13.55 4.19 1.595 6L.045 24l6.115-1.559a11.966 11.966 0 005.871 1.53h.005c6.649 0 12.031-5.383 12.031-12.033 0-6.648-5.382-12.031-12.036-12.031zM12.036 22h-.005a9.993 9.993 0 01-5.06-1.373l-.362-.215-3.765.986.997-3.67-.236-.375A9.972 9.972 0 012.054 12.03c0-5.503 4.478-9.981 9.982-9.981 5.504 0 9.983 4.478 9.983 9.982 0 5.503-4.479 9.981-9.983 9.981z"/>
+                </svg>
+                <h3 class="font-bold text-lg mb-2">Ligne WhatsApp</h3>
+                <p class="text-sm text-gray-600 mb-4">Discutez directement avec un conseiller pour vos questions administratives.</p>
+                <span class="text-primary text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Discuter sur WhatsApp
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </div>
+
+            <!-- Email Support -->
+            <a href="mailto:support@bismanfx.com?subject=Demande%20de%20support&body=Bonjour%2C%20je%20souhaite%20obtenir%20de%20l%27aide%20concernant..." class="bg-card border border-gray-200 p-8 rounded-lg shadow-sm hover:border-gray-300 transition block">
+                <svg class="w-8 h-8 text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <h3 class="font-bold text-lg mb-2">Ticket Email</h3>
+                <p class="text-sm text-gray-600 mb-4">Pour les demandes nécessitant l'envoi de documents ou de captures d'écran.</p>
+                <span class="text-primary text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Envoyer un email
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <!-- Additional Support Info -->
+        <div class="max-w-7xl mx-auto px-6 mt-16">
+            <div class="bg-primary/5 rounded-lg p-8 border border-primary/10">
+                <h3 class="text-xl font-semibold text-textmain mb-4">Horaires d'assistance</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-gray-600 mb-2"><span class="font-medium">WhatsApp & Telegram:</span> 7j/7, 9h00 - 22h00</p>
+                        <p class="text-gray-600"><span class="font-medium">Email:</span> Réponse sous 24h ouvrées</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-sm text-gray-500">Pour toute urgence, privilégiez WhatsApp ou Telegram</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        // Telegram function
+        function openTelegram() {
+            const telegramUsername = "bismanfx_support"; // Remplacez par votre username Telegram
+            const message = encodeURIComponent("Bonjour, j'ai besoin d'aide concernant le support Telegram.");
+            const telegramUrl = `https://t.me/${telegramUsername}?text=${message}`;
+            window.open(telegramUrl, '_blank');
+        }
+
+        // WhatsApp function for support
+        function openWhatsAppSupport() {
+            const phoneNumber = "+243993161923";
+            const message = encodeURIComponent("Bonjour, je souhaite obtenir de l'aide sur BismanFx Academy. (Depuis la page Support)");
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Alternative: If you want to open Telegram group/channel instead of direct message
+        function openTelegramGroup() {
+            const telegramGroup = "bismanfx_community"; // Nom du groupe ou channel
+            const telegramUrl = `https://t.me/${telegramGroup}`;
+            window.open(telegramUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

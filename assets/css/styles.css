@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F7F7F7;
+    color: #1F2937;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background-color: #EF4444;
+    color: white;
+}
+
+/* Scrollbar discrète et pro */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F7F7F7; }
+::-webkit-scrollbar-thumb { background: #1F2937; border-radius: 3px; }
+
+/* Animation d'apparition douce et professionnelle */
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
