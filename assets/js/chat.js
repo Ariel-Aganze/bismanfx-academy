@@ -1,6 +1,6 @@
 // Floating WhatsApp Button
 document.addEventListener("DOMContentLoaded", () => {
-    const phoneNumber = "+243993161923"; 
+    const phoneNumber = "+243843671383"; 
     
     // Different message for the floating button
     const message = encodeURIComponent("Bonjour, je souhaite en savoir plus sur BismanFx Academy.");
