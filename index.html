@@ -20,6 +20,69 @@
             }
         }
     </script>
+    <style>
+        /* Hero Slider Fade Animation */
+        .hero-slider-container {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        .hero-slide.fade-out {
+            opacity: 0;
+        }
+        
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Ensure overlay stays above images */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(58, 0, 4, 0.9), rgba(58, 0, 4, 0.7), transparent);
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        /* Content stays above everything */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/componentLoader.js" defer></script>
     <script src="assets/js/chat.js" defer></script>
@@ -29,11 +92,25 @@
     <div id="header"></div>
 
     <main>
-        <!-- 1. Hero Section -->
-        <!-- <section class="bg-premium py-20 lg:py-32">
-            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- 1. Hero Section with Fading Background Animation -->
+        <section class="relative py-20 lg:py-32 overflow-hidden min-h-[600px] flex items-center">
+            <!-- Animated Background Slider -->
+            <div class="hero-slider-container">
+                <div class="hero-slide active" id="slide1">
+                    <img src="assets/images/resized_image.png" alt="Interface de trading professionnelle">
+                </div>
+                <div class="hero-slide" id="slide2">
+                    <img src="assets/images/hero-trading.jpg" alt="Trading chart analysis">
+                </div>
+                
+            </div>
+            <!-- Gradient Overlay -->
+            <div class="hero-overlay"></div>
+            
+            <!-- Content -->
+            <div class="hero-content max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
-                    <span class="inline-block py-1 px-3 rounded bg-white/10 text-primary text-xs font-semibold tracking-wide uppercase mb-6 border border-primary/20">Plateforme d'excellence</span>
+                    <span class="inline-block py-1 px-3 rounded bg-white/10 text-primary text-xs font-semibold tracking-wide uppercase mb-6 border border-primary/20">Académie d'excellence</span>
                     <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
                         Maîtrisez les marchés avec la précision d'un institutionnel.
                     </h1>
@@ -50,42 +127,10 @@
                     </div>
                 </div>
                 <div class="fade-in relative hidden lg:block">
-                    <img src="assets/images/hero-trading.jpg" alt="Interface de trading professionnelle" class="w-full h-[450px] object-cover rounded-lg shadow-xl border border-white/10">
+                    <!-- This div is intentionally left empty to maintain the grid layout -->
                 </div>
             </div>
-        </section> -->
-
-        <section class="relative py-20 lg:py-32 overflow-hidden">
-    <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 z-0">
-        <img src="assets/images/resized_image.png" alt="Interface de trading professionnelle" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#3A0004]/90 via-[#3A0004]/70 to-transparent"></div>
-    </div>
-    
-    <!-- Content -->
-    <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="fade-in">
-            <span class="inline-block py-1 px-3 rounded bg-white/10 text-primary text-xs font-semibold tracking-wide uppercase mb-6 border border-primary/20">Académie d'excellence</span>
-            <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Maîtrisez les marchés avec la précision d'un institutionnel.
-            </h1>
-            <p class="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed">
-                Formation rigoureuse, analyses de marché et mentoring en direct pour traders ambitieux. Construisez une rentabilité durable et prouvée.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="plans.html" class="bg-primary text-white text-center font-medium px-6 py-3 rounded hover:bg-red-600 transition shadow-sm">
-                    Découvrir nos programmes
-                </a>
-                <a href="about.html" class="bg-transparent border border-white/20 text-white text-center font-medium px-6 py-3 rounded hover:bg-white/5 transition">
-                    En savoir plus
-                </a>
-            </div>
-        </div>
-        <div class="fade-in relative hidden lg:block">
-            <!-- This div is intentionally left empty to maintain the grid layout -->
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- 2. Trust Metrics -->
         <section class="py-12 bg-card border-b border-gray-200">
@@ -315,5 +360,38 @@
         </section>
     </main>
     <div id="footer"></div>
+
+    <script>
+        // Hero section fade transition between 3 images
+        (function() {
+            const slides = document.querySelectorAll('.hero-slide');
+            if (slides.length === 0) return;
+            
+            let currentIndex = 0;
+            const intervalTime = 5000; // 5 seconds per image
+            
+            function switchToNextSlide() {
+                // Remove active class from current slide
+                slides[currentIndex].classList.remove('active');
+                
+                // Move to next index
+                currentIndex = (currentIndex + 1) % slides.length;
+                
+                // Add active class to new slide
+                slides[currentIndex].classList.add('active');
+            }
+            
+            // Start the slideshow
+            setInterval(switchToNextSlide, intervalTime);
+            
+            // Preload images for smoother transitions
+            slides.forEach(slide => {
+                const img = slide.querySelector('img');
+                if (img && img.complete === false) {
+                    img.onload = () => {};
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
